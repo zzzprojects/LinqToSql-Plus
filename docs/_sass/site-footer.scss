@@ -1,0 +1,14 @@
+//
+// site-footer
+//
+.site-footer {
+	@include background-black;
+	color: $color-light;
+	font-size: $font-size-xl;
+	margin-top: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.site-footer input {
+	margin: 0 15px;
+}
