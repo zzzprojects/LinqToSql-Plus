@@ -69,12 +69,12 @@ context.BulkInsert(list, options => options.ColumnInputExpression = c => new {c.
 <!--### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
 
-Read more: [IncludeGraph](/include-graph) !-->
+Read more: [IncludeGraph](/include-graph) 
 
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkInsert(list, options => options.IncludeGraph = true);
-{% endhighlight %}
+{% endhighlight %} !-->
 
 ### Why BulkInsert doesn't use the ChangeTracker?
 To provide the best performance possible!
