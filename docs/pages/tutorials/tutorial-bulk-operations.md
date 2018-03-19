@@ -5,7 +5,7 @@ permalink: tutorial-bulk-operations
 ## Definition
 Bulk operations method gives you additional flexibility by allowing to customize options such as primary key, columns, include childs entities and more.
 
-<!-- They are also faster than BulkSubmitChanges since they don’t use the ChangeTracker and doesn’t call the DetectChanges method. !-->
+They are also faster than BulkSubmitChanges since they don’t use the ChangeTracker and doesn’t call the DetectChanges method. 
 
 Bulk Operations Available:
 - [BulkInsert](/bulk-insert)
@@ -44,8 +44,9 @@ By example:
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
+<!--
 ### Related Articles
 
 - [How to Benchmark?](benchmark)
 - [How to use Custom Column?](custom-column)
-- [How to use Custom Key?](custom-key)
+- [How to use Custom Key?](custom-key) !-->
