@@ -9,10 +9,10 @@ However, if you start a transaction within LinqToSql, BulkSaveChanges will honor
 
 {% include template-example.html %} 
 {% highlight csharp %}
-var transaction = context.Database.BeginTransaction();
+var transaction = context.Connection.BeginTransaction();
 try
 {
-	context.BulkSaveChanges();
+	context.BulkSubmitChanges();
 	transaction.Commit();
 }
 catch
@@ -29,7 +29,7 @@ If you start a transaction within LinqToSql, Bulk Operations will honor it.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-var transaction = context.Database.BeginTransaction();
+var transaction = context.Connection.BeginTransaction();
 try
 {
 	context.BulkInsert(list1);
