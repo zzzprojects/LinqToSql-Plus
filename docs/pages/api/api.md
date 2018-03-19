@@ -13,7 +13,7 @@ permalink: api
 
 <div markdown="1">
 - Bulk Operations
-   - [Bulk SaveChanges](bulk-savechanges)
+   - [Bulk SubmitChanges](bulk-SubmitChanges) (Coming Soon)
    - [Bulk Insert](bulk-insert)
    - [Bulk Update](bulk-update)
    - [Bulk Delete](bulk-delete)
