@@ -35,6 +35,6 @@ Batch Operations are executed directly on the database side which provides the b
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | DeleteFromQuery | 1 ms           | 1 ms           | 1 ms           |
 | UpdateFromQuery | 1 ms           | 1 ms           | 1 ms           |
