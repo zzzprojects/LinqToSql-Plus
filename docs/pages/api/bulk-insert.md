@@ -79,10 +79,10 @@ context.BulkInsert(list, options => options.IncludeGraph = true);
 ### Why BulkInsert doesn't use the ChangeTracker?
 To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle the scenarios with `ChangeTracker` and `BulkInsert` the scenarios without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `SubmitChanges` method handle the scenarios with `ChangeTracker` and `BulkInsert` the scenarios without it.
 
 ### Why BulkInsert is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkInsert` method.
+The major difference between both methods is `SubmitChanges` uses the `ChangeTracker` but not the `BulkInsert` method.
 
 By skipping the `ChangeTracker`, some methods like `Add`, `AddRange`, `DetectChanges` are no longer required which greatly helps to improve the performance.
 {% include section-faq-end.html %}
