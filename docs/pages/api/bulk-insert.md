@@ -19,9 +19,9 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 ## Purpose
 `Inserting` thousand of entities for an initial load or a file importation is a typical scenario.
 
-`SaveChanges` method makes it quite impossible to handle this kind of situation directly from Entity Framework due to the number of database round-trips required.
+<!--`SubmitChanges` method makes it quite impossible to handle this kind of situation directly from Entity Framework due to the number of database round-trips required. 
 
-`SaveChanges` requires one database round-trip for every entity to `insert`. So if you need to `insert` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
+!-->`SubmitChanges` requires one database round-trip for every entity to `insert`. So if you need to `insert` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.!
 
 `BulkInsert` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a simple`SqlBulkCopy` could be performed.
 
@@ -29,7 +29,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkInsert      | 6 ms           | 10 ms          | 15 ms          |
 
 {% include section-faq-begin.html %}
@@ -66,10 +66,10 @@ Read more: [ColumnInputExpression](/column-input-expression)
 context.BulkInsert(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
 {% endhighlight %}
 
-### How can I include child entities (Entity Graph)?
+<!--### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
 
-Read more: [IncludeGraph](/include-graph)
+Read more: [IncludeGraph](/include-graph) !-->
 
 {% include template-example.html %} 
 {% highlight csharp %}
