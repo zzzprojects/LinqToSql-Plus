@@ -219,8 +219,8 @@ context.BulkMerge(customers, options => {
 
 	<div class="container">
 
-		<!-- Bulk SaveChanges  
-		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SaveChanges</h2>
+		Bulk SubmitChanges (Coming Soon) 
+		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SubmitChanges</h2>
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Make your applications 10x to 50x times more <span class="text-z">scalable</span> without any configuration and effort.</p>
@@ -241,17 +241,17 @@ context.BulkMerge(customers, options => {
 					<div class="card-header"><h5>Bulk SaveChanges Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
-// Easy to use
-context.BulkSaveChanges();
+// Easy to use (Coming Soon) 
+context.BulkSubmitChanges(); 
 
 // Easy to customize
-context.BulkSaveChanges(options => options.BatchSize = 1000);
+context.BulkSubmitChanges(options => options.BatchSize = 1000);
 {% endhighlight %}
 					</div>
 				</div>
 			</div>
 		</div>
-!-->
+
 		<hr class="m-y-md" />
 		
 		<!-- Bulk Operations  !-->
