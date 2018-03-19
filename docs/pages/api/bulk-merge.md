@@ -21,7 +21,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 
 Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
 
-`SaveChanges` requires one database round-trip for every entity to `insert` or `update`. So if you need to `insert` or `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
+`SubmitChanges` requires one database round-trip for every entity to `insert` or `update`. So if you need to `insert` or `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
 `BulkMerge` in counterpart offers great customization and requires the minimum database round-trips as possible.
 
@@ -29,7 +29,7 @@ Despite the `ChangeTracker` being outstanding to track what's modified, it lacks
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
 
 {% include section-faq-begin.html %}
@@ -96,7 +96,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
 
-### How can I include child entities (Entity Graph)?
+<!--### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
 
 Read more: [IncludeGraph](/include-graph)
@@ -104,12 +104,12 @@ Read more: [IncludeGraph](/include-graph)
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkMerge(list, options => options.IncludeGraph = true);
-{% endhighlight %}
+{% endhighlight %}!-->
 
 ### Why BulkMerge doesn't use the ChangeTracker?
 To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `SubmitChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
 {% include section-faq-end.html %}
 
 ## Related Articles
