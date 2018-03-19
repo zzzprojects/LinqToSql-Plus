@@ -219,8 +219,8 @@ context.BulkMerge(customers, options => {
 
 	<div class="container">
 
-		Bulk SubmitChanges (Coming Soon) 
-		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SubmitChanges</h2>
+		<!--Bulk SubmitChanges  !-->
+		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SubmitChanges</h2> (Coming Soon)
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Make your applications 10x to 50x times more <span class="text-z">scalable</span> without any configuration and effort.</p>
@@ -297,7 +297,7 @@ context.BulkMerge(customers, options => {
 		<hr class="m-y-md" />
 		
 		<!-- Batch Operations (Coming Soon!) !-->
-		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations</h2>
+		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations</h2> (Coming Soon)
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Perform your operations from LINQ Query without loading entities in the context.</p>
@@ -317,11 +317,11 @@ context.BulkMerge(customers, options => {
 					<div class="card-header"><h5>Batch Operations Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
-// DELETE all inactive customers 
+// DELETE all inactive customers  (Coming Soon)
 context.Customers.Where(x => !x.IsActif)
        .DeleteFromQuery();
 	   
-// UPDATE all inactive customers
+// UPDATE all inactive customers (Coming Soon)
 context.Customers.Where(x => !x.IsActif)
        .UpdateFromQuery(x => new Customer {IsActif = true});
 {% endhighlight %}	
