@@ -38,7 +38,7 @@ By example:
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkInsert      | 6 ms           | 10 ms          | 15 ms          |
 | BulkUpdate      | 50 ms          | 55 ms          | 65 ms          |
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
