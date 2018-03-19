@@ -233,8 +233,8 @@ context.BulkMerge(customers, options => {
 					<a href="{{ site.github.url }}/tutorial-bulk-SubmitChanges" class="btn btn-lg btn-z" role="button">
 						<i class="fa fa-book"></i>&nbsp;
 						Read More
-					</a> !-->
-				</div>	
+					</a> 
+				</div>	!-->
 			</div>
 			<div class="col-lg-7 wow slideInRight">
 				<div class="card card-code card-code-dark">
