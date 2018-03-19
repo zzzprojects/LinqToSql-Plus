@@ -40,12 +40,12 @@ context.BulkSynchronize(list);
 {% endhighlight %}
 
 All batch operations extension methods are automatically added to your Queryable:
-- DeleteFromQuery
-- UpdateFromQuery
+- DeleteFromQuery (Coming Soon)
+- UpdateFromQuery (Coming Soon)
 
 {% include template-example.html title='Batch Operations Examples'%} 
 {% highlight csharp %}
-// Batch Operations
+// Batch Operations (Coming Soon)
 context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
 context.Customers.Where(x => !x.IsActif).UpdateFromQuery(x => new Customer {Actif = true});
 {% endhighlight %}
