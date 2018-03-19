@@ -33,7 +33,7 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 {% include section-faq-begin.html %}
 ## FAQ
 
-### Why UpdateFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkUpdate?
+### Why UpdateFromQuery is faster than SubmitChanges, BulkSSubmitChanges, and BulkUpdate?
 
 `UpdateFromQuery` executes a statement directly in SQL such as `UPDATE [TableName] SET [SetColumnsAndValues] WHERE [Key]`. 
 
