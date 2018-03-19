@@ -220,7 +220,7 @@ context.BulkMerge(customers, options => {
 	<div class="container">
 
 		<!--Bulk SubmitChanges  !-->
-		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SubmitChanges</h2> (Coming Soon)
+		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SubmitChanges (Coming Soon)</h2> 
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Make your applications 10x to 50x times more <span class="text-z">scalable</span> without any configuration and effort.</p>
@@ -244,7 +244,7 @@ context.BulkMerge(customers, options => {
 // Easy to use (Coming Soon) 
 context.BulkSubmitChanges(); 
 
-// Easy to customize
+// Easy to customize (Coming Soon) 
 context.BulkSubmitChanges(options => options.BatchSize = 1000);
 {% endhighlight %}
 					</div>
@@ -296,8 +296,8 @@ context.BulkMerge(customers, options => {
 		
 		<hr class="m-y-md" />
 		
-		<!-- Batch Operations (Coming Soon!) !-->
-		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations</h2> (Coming Soon)
+		<!-- Batch Operations !-->
+		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations (Coming Soon)</h2> 
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Perform your operations from LINQ Query without loading entities in the context.</p>
