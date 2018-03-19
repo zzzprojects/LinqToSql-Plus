@@ -229,16 +229,16 @@ context.BulkMerge(customers, options => {
 					<li>Easy to customize</li>
 					<li>Easy to maintain</li>
 				</ul>
-				<div class="more-info">
-					<a href="{{ site.github.url }}/tutorial-bulk-savechanges" class="btn btn-lg btn-z" role="button">
+				<!--<div class="more-info">
+					<a href="{{ site.github.url }}/tutorial-bulk-SubmitChanges" class="btn btn-lg btn-z" role="button">
 						<i class="fa fa-book"></i>&nbsp;
 						Read More
-					</a>
+					</a> !-->
 				</div>	
 			</div>
 			<div class="col-lg-7 wow slideInRight">
 				<div class="card card-code card-code-dark">
-					<div class="card-header"><h5>Bulk SaveChanges Examples</h5></div>
+					<div class="card-header"><h5>Bulk SubmitChanges Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
 // Easy to use (Coming Soon) 
