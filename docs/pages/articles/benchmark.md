@@ -23,9 +23,9 @@ Entity Framework Extensions also takes some time to be compiled. It can take aro
 Invoke the method once before performing the benchmark tests
 
 ## Include method not related to the test
-Someone once reported a performance issue and thought our BulkSaveChanges method was slow. We discovered he was including the time to Add every entity to the context.
+Someone once reported a performance issue and thought our BulkInsert method was slow. We discovered he was including the time to Add every entity to the context.
 
-The Add method was taking 99,9% of the total time while BulkSaveChanges only 0,1%.
+The Add method was taking 99,9% of the total time while BulkInsert only 0,1%.
 
 
 | Operations | 100 Entities | 1,000 Entities | 10,000 Entities |
