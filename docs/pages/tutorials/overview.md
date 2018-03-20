@@ -56,7 +56,7 @@ context.BulkMerge(customers, options =>
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkInsert      | 6 ms           | 10 ms          | 15 ms          |
 | BulkUpdate      | 50 ms          | 55 ms          | 65 ms          |
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
@@ -80,15 +80,16 @@ context.Customers
     .DeleteFromQuery();
  
 // UPDATE all customers that are inactive for more than two years
-context.Customers
+context.Customers (Coming Soon)
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
 {% endhighlight %}
-
+<!--
 ### Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | DeleteFromQuery | 1 ms           | 1 ms           | 1 ms           |
 | UpdateFromQuery | 1 ms           | 1 ms           | 1 ms           |
+--!>

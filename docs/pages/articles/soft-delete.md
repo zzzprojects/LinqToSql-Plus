@@ -1,7 +1,7 @@
 ---
 permalink: soft-delete
 ---
-
+<!--
 ## Problem
 You want to soft delete some entities currently in deleted state with BulkSaveChanges.
 
@@ -44,7 +44,7 @@ using (var ctx = new CurrentContext())
     ctx.Customers.RemoveRange(list);
     ctx.BulkSaveChanges();
 }
-{% endhighlight %}
+{% endhighlight %}!-->
 
 ## Problem
 You want to soft delete some entities currently in deleted state with BulkDelete.

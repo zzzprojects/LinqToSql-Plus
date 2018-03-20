@@ -27,7 +27,7 @@ context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkSynchronize | 55 ms          | 65 ms          | 85 ms          |
 
 {% include section-faq-begin.html %}

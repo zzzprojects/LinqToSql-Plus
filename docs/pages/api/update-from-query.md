@@ -19,7 +19,7 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 {% endhighlight %}
 
 ## Purpose
-`Updating` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
+`Updating` entities using `SubmitChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
 
 `UpdateFromQuery` gives you access to directly execute an `UPDATE` statement in the database and provide a **HUGE** performance improvement.
 
@@ -27,13 +27,13 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | UpdateFromQuery | 1 ms           | 1 ms           | 1 ms           |
 
 {% include section-faq-begin.html %}
 ## FAQ
 
-### Why UpdateFromQuery is faster than SaveChanges, BulkSaveChanges, and BulkUpdate?
+### Why UpdateFromQuery is faster than SubmitChanges, BulkSSubmitChanges, and BulkUpdate?
 
 `UpdateFromQuery` executes a statement directly in SQL such as `UPDATE [TableName] SET [SetColumnsAndValues] WHERE [Key]`. 
 

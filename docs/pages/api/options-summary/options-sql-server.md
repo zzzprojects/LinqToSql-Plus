@@ -7,7 +7,7 @@ Gets or sets the SqlBulkCopyOptions to use when `SqlBulkCopy` is used to directl
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.SqlBulkCopyOptions = SqlBulkCopyOptions.Default | SqlBulkCopyOptions.TableLock;
 });

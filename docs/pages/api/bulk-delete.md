@@ -21,7 +21,7 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 
 Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
 
-`SaveChanges` requires one database round-trip for every entity to `delete`. So if you need to `delete` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
+`SubmitChanges` requires one database round-trip for every entity to `delete`. So if you need to `delete` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
 `BulkDelete` in counterpart offers great customization and requires the minimum database round-trips as possible.
 
@@ -29,7 +29,7 @@ Despite the `ChangeTracker` being outstanding to track what's modified, it lacks
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
 
 {% include section-faq-begin.html %}
@@ -70,16 +70,16 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
 
-### How can I include child entities (Entity Graph)?
-You cannot. Due to the risk of mistakes, we preferred not to offer this option and make sure every entity you wish to `delete` is specified.
+<!--### How can I include child entities (Entity Graph)?
+You cannot. Due to the risk of mistakes, we preferred not to offer this option and make sure every entity you wish to `delete` is specified.!-->
 
 ### Why BulkDelete doesn't use the ChangeTracker?
 To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkDelete`, scenarios without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `SubmitChanges` method handle scenarios with `ChangeTracker` and `BulkDelete`, scenarios without it.
 
-### Why BulkDelete is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkDelete` method.
+### Why BulkDelete is faster than SubmitChanges?
+The major difference between both methods is `SubmitChanges` uses the `ChangeTracker` but not the `BulkDelete` method.
 
 By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
 {% include section-faq-end.html %}
