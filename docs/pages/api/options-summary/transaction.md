@@ -2,17 +2,17 @@
 permalink: transaction
 ---
 
-## BulkSaveChanges
-As SaveChanges, BulkSaveChanges already save all entities within an internal transaction. So by default, there is nothing to do.
+## BulkSubmitChanges
+As SubmitChanges, BulkSubmitChanges already save all entities within an internal transaction. So by default, there is nothing to do.
 
-However, if you start a transaction within Entity Framework, BulkSaveChanges will honor it and will use this transaction instead of creating an internal transaction.
+However, if you start a transaction within LinqToSql, BulkSaveChanges will honor it and will use this transaction instead of creating an internal transaction.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-var transaction = context.Database.BeginTransaction();
+var transaction = context.Connection.BeginTransaction();
 try
 {
-	context.BulkSaveChanges();
+	context.BulkSubmitChanges();
 	transaction.Commit();
 }
 catch
@@ -25,11 +25,11 @@ catch
 ## Bulk Operations
 Bulk Operations such as BulkInsert, BulkUpdate, BulkDelete doesn't use a transaction by default. This is your responsibility to handle it.
 
-If you start a transaction within Entity Framework, Bulk Operations will honor it.
+If you start a transaction within LinqToSql, Bulk Operations will honor it.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-var transaction = context.Database.BeginTransaction();
+var transaction = context.Connection.BeginTransaction();
 try
 {
 	context.BulkInsert(list1);

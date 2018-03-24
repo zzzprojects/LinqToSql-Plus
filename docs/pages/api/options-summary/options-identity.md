@@ -7,7 +7,7 @@ Gets or sets if the source identity value should be preserved on `Insert`. When 
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.Insert(options => options.InsertKeepIdentity = true);
+context.BulkInsert(list ,options => options.InsertKeepIdentity = true);
 {% endhighlight %}
 
 ---

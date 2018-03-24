@@ -7,7 +7,7 @@ Gets or sets the number of records to use in a batch.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options => options.BatchSize = 1000);
+context.BulkSubmitChanges(options => options.BatchSize = 1000);
 {% endhighlight %}
 
 ---
@@ -17,7 +17,7 @@ Gets or sets the maximum of time in seconds to wait for a batch before the comma
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options => options.BatchTimeout = 180);
+context.BulkSubmitChanges(options => options.BatchTimeout = 180);
 {% endhighlight %}
 
 ---

@@ -7,7 +7,7 @@ Gets or sets if a duplicate key is possible in the source.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options => options.AllowDuplicateKeys = true);
+context.BulkSubmitChanges(options => options.AllowDuplicateKeys = true);
 {% endhighlight %}
 
 ---
@@ -17,5 +17,5 @@ Gets or sets if the key must also be included in columns to `UPDATE`.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options => options.AllowUpdatePrimaryKeys = true);
+context.BulkSubmitChanges(options => options.AllowUpdatePrimaryKeys = true);
 {% endhighlight %}

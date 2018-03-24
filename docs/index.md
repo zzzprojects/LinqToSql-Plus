@@ -219,8 +219,8 @@ context.BulkMerge(customers, options => {
 
 	<div class="container">
 
-		<!-- Bulk SaveChanges  
-		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SaveChanges</h2>
+		<!--Bulk SubmitChanges  !-->
+		<h2 class="wow slideInUp"><span class="text-z">Bulk</span> SubmitChanges (Coming Soon)</h2> 
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Make your applications 10x to 50x times more <span class="text-z">scalable</span> without any configuration and effort.</p>
@@ -229,29 +229,29 @@ context.BulkMerge(customers, options => {
 					<li>Easy to customize</li>
 					<li>Easy to maintain</li>
 				</ul>
-				<div class="more-info">
-					<a href="{{ site.github.url }}/tutorial-bulk-savechanges" class="btn btn-lg btn-z" role="button">
+				<!--<div class="more-info">
+					<a href="{{ site.github.url }}/tutorial-bulk-SubmitChanges" class="btn btn-lg btn-z" role="button">
 						<i class="fa fa-book"></i>&nbsp;
 						Read More
-					</a>
-				</div>	
+					</a> 
+				</div>	!-->
 			</div>
 			<div class="col-lg-7 wow slideInRight">
 				<div class="card card-code card-code-dark">
-					<div class="card-header"><h5>Bulk SaveChanges Examples</h5></div>
+					<div class="card-header"><h5>Bulk SubmitChanges Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
-// Easy to use
-context.BulkSaveChanges();
+// Easy to use (Coming Soon) 
+context.BulkSubmitChanges(); 
 
-// Easy to customize
-context.BulkSaveChanges(options => options.BatchSize = 1000);
+// Easy to customize (Coming Soon) 
+context.BulkSubmitChanges(options => options.BatchSize = 1000);
 {% endhighlight %}
 					</div>
 				</div>
 			</div>
 		</div>
-!-->
+
 		<hr class="m-y-md" />
 		
 		<!-- Bulk Operations  !-->
@@ -296,8 +296,8 @@ context.BulkMerge(customers, options => {
 		
 		<hr class="m-y-md" />
 		
-		<!-- Batch Operations (Coming Soon!) !-->
-		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations</h2>
+		<!-- Batch Operations !-->
+		<h2 class="wow slideInUp"><span class="text-z">Batch</span> Operations (Coming Soon)</h2> 
 		<div class="row">
 			<div class="col-lg-5 wow slideInLeft">
 				<p class="feature-tagline">Perform your operations from LINQ Query without loading entities in the context.</p>
@@ -317,11 +317,11 @@ context.BulkMerge(customers, options => {
 					<div class="card-header"><h5>Batch Operations Examples</h5></div>
 					<div class="card-body">
 {% highlight csharp %}
-// DELETE all inactive customers 
+// DELETE all inactive customers  (Coming Soon)
 context.Customers.Where(x => !x.IsActif)
        .DeleteFromQuery();
 	   
-// UPDATE all inactive customers
+// UPDATE all inactive customers (Coming Soon)
 context.Customers.Where(x => !x.IsActif)
        .UpdateFromQuery(x => new Customer {IsActif = true});
 {% endhighlight %}	

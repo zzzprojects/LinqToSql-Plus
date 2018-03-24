@@ -21,7 +21,7 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = cu
 
 Despite the `ChangeTracker` being outstanding to track what's modified, it lacks in term of scalability and flexibility.
 
-`SaveChanges` requires one database round-trip for every entity to `update`. So if you need to `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
+`SubmitChanges` requires one database round-trip for every entity to `update`. So if you need to `update` 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
 `BulkUpdate` in counterpart offers great customization and requires the minimum database round-trips possible.
 
@@ -29,7 +29,7 @@ Despite the `ChangeTracker` being outstanding to track what's modified, it lacks
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
+| SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkUpdate      | 50 ms          | 55 ms          | 65 ms          |
 
 {% include section-faq-begin.html %}
@@ -80,23 +80,23 @@ context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = cu
 context.BulkUpdate(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 {% endhighlight %}
 
-### How can I include child entities (Entity Graph)?
+<!--### How can I include child entities (Entity Graph)?
 You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
 
-Read more: [IncludeGraph](/include-graph)
+Read more: [IncludeGraph](/include-graph)!
 
 {% include template-example.html %} 
 {% highlight csharp %}
 context.BulkUpdate(list, options => options.IncludeGraph = true);
-{% endhighlight %}
+{% endhighlight %}-->
 
 ### Why BulkUpdate doesn't use the ChangeTracker?
 To provide the best performance possible!
 
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkUpdate`, scenarios without it.
+Since using the `ChangeTracker` can greatly reduce performance, we chose to let `SubmitChanges` method handle scenarios with `ChangeTracker` and `BulkUpdate`, scenarios without it.
 
-### Why BulkUpdate is faster than BulkSaveChanges?
-The major difference between both methods is `BulkSaveChanges` uses the `ChangeTracker` but not the `BulkUpdate` method.
+### Why BulkUpdate is faster than SubmitChanges?
+The major difference between both methods is `SubmitChanges` uses the `ChangeTracker` but not the `BulkUpdate` method.
 
 By skipping the `ChangeTracker`, some methods like `DetectChanges` are no longer required which greatly helps to improve the performance.
 {% include section-faq-end.html %}

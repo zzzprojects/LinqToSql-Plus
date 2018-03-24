@@ -9,7 +9,7 @@ Gets or sets an action to `log` all database events as soon as they happen.
 {% highlight csharp %}
 StringBuilder logger = new StringBuilder();
 
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
 	options.Log += s => logger.AppendLine(s);
 });
@@ -24,7 +24,7 @@ Gets or sets if all `log` related to database event should be stored in a `LogDu
 {% highlight csharp %}
 StringBuilder logDump;
 
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
 	options.UseLogDump = true;
 	options.BulkOperationExecuted = bulkOperation => logDump = bulkOperation.LogDump;
@@ -40,7 +40,7 @@ Gets all `logged` database event when `UseLogDump` is enabled.
 {% highlight csharp %}
 StringBuilder logDump;
 
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
 	options.UseLogDump = true;
 	options.BulkOperationExecuted = bulkOperation => logDump = bulkOperation.LogDump;

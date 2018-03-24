@@ -7,7 +7,7 @@ Gets or sets the number of batches a temporary table can contain. This option ma
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.TemporaryTableBatchByTable = 0; // unlimited
 });
@@ -20,7 +20,7 @@ Gets or sets the number of records to use in a batch when inserting in a tempora
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.TemporaryTableInsertBatchSize = 50000;
 });
@@ -33,7 +33,7 @@ Gets or sets the minimum number of records to use a temporary table instead of u
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.TemporaryTableMinRecord = 25;
 });
@@ -46,7 +46,7 @@ Gets or sets the schema name to use for the temporary table.
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.TemporaryTableSchemaName = "zzz";
 });
@@ -59,7 +59,7 @@ Gets or sets if the temporary table must be locked when inserting records into i
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.TemporaryTableUseTableLock = true;
 });
@@ -73,7 +73,7 @@ Gets or sets if the library should `create` and `drop` a permanent table instead
 
 {% include template-example.html %} 
 {% highlight csharp %}
-context.BulkSaveChanges(options =>
+context.BulkSubmitChanges(options =>
 {
    options.UsePermanentTable = true;
 });
