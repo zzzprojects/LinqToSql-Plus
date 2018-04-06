@@ -84,7 +84,7 @@ context.Customers (Coming Soon)
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
 {% endhighlight %}
-<!--
+
 ### Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
@@ -92,4 +92,3 @@ context.Customers (Coming Soon)
 | SubmitChanges   | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | DeleteFromQuery | 1 ms           | 1 ms           | 1 ms           |
 | UpdateFromQuery | 1 ms           | 1 ms           | 1 ms           |
---!>
