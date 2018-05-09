@@ -12,9 +12,9 @@ The library is installed through <a href="/installing">NuGet</a>. Extension meth
 
 It easy to use, easy to customize.
 
-{% include template-example.html %} 
 
-{% highlight csharp %}
+
+```csharp
 // Easy to use
 context.BulkInsert(list);
 context.BulkUpdate(list);
@@ -24,7 +24,7 @@ context.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, options => 
 	options.ColumnPrimaryKeyExpression = customer => customer.Code);
-{% endhighlight %}
+```
 
 
 ## Bulk Operations Methods
@@ -40,7 +40,7 @@ Bulk Operations Available:
 - [BulkSynchronize](/bulk-synchronize)
 
 {% include template-example.html title='Bulk Operations Examples' %} 
-{% highlight csharp %}
+```csharp
 // Easy to use
 context.BulkInsert(list);
 context.BulkUpdate(list);
@@ -50,7 +50,7 @@ context.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, options => 
 	options.ColumnPrimaryKeyExpression = customer => customer.Code; });
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 
@@ -73,7 +73,7 @@ Batch Operations Available:
 - [UpdateFromQuery](update-from-query)
 
 {% include template-example.html title='Batch Operations Examples' %} 
-{% highlight csharp %}
+```csharp
 // DELETE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.LastLogin < DateTime.Now.AddYears(-2))
@@ -83,7 +83,7 @@ context.Customers
 context.Customers (Coming Soon)
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
     .UpdateFromQuery(x => new Customer {Actif = false});
-{% endhighlight %}
+```
 
 ### Performance Comparisons
 

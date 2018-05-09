@@ -45,8 +45,8 @@ Include only the method you want to benchmark.
 Here is an example of how we normally do all our benchmarks tests
 
 ### Example
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -164,5 +164,5 @@ namespace BENCHMARK_Z.LinqToSql.Plus
         } 
     }
 }
-{% endhighlight %}
+```
 

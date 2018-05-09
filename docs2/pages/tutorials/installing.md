@@ -30,22 +30,22 @@ All bulk operations extension methods are automatically added to your DbContext:
 - BulkSynchronize
 
 {% include template-example.html title='Bulk Operations Examples'%} 
-{% highlight csharp %}
+```csharp
 // Bulk Operations
 context.BulkInsert(list);
 context.BulkUpdate(list);
 context.BulkDelete(list);
 context.BulkMerge(list);
 context.BulkSynchronize(list);
-{% endhighlight %}
+```
 
 All batch operations extension methods are automatically added to your Queryable:
 - DeleteFromQuery (Coming Soon)
 - UpdateFromQuery (Coming Soon)
 
 {% include template-example.html title='Batch Operations Examples'%} 
-{% highlight csharp %}
+```csharp
 // Batch Operations (Coming Soon)
 context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
 context.Customers.Where(x => !x.IsActif).UpdateFromQuery(x => new Customer {Actif = true});
-{% endhighlight %}
+```

@@ -25,8 +25,8 @@ There are three possible resolutions:
 - Custom Resolution
 
 #### Database Win
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkUpdate_DatabaseWins<T>(CurrentContext ctx, List<T> list) where T : class
 {
     try
@@ -38,11 +38,11 @@ public void BulkUpdate_DatabaseWins<T>(CurrentContext ctx, List<T> list) where T
         // DO nothing (or log), keep database values!
     }
 }
-{% endhighlight %}
+```
 
 #### Client Win
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkUpdate_StoreWins<T>(CurrentContext ctx, List<T> list) where T : class
 {
     try
@@ -55,11 +55,11 @@ public void BulkUpdate_StoreWins<T>(CurrentContext ctx, List<T> list) where T : 
         ctx.BulkUpdate(list, operation => operation.AllowConcurrency = false);
     }
 }
-{% endhighlight %}
+```
 
 #### Custom Resolution
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 public void BulkUpdate_CustomResolution<T>(CurrentContext ctx, List<T> list) where T : class
 {
     try
@@ -86,4 +86,4 @@ public void BulkUpdate_CustomResolution<T>(CurrentContext ctx, List<T> list) whe
         ctx.BulkUpdate(list, operation => operation.AllowConcurrency = false);
     }
 }
-{% endhighlight %}
+```

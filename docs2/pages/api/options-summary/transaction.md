@@ -7,8 +7,8 @@ As SubmitChanges, BulkSubmitChanges already save all entities within an internal
 
 However, if you start a transaction within LinqToSql, BulkSaveChanges will honor it and will use this transaction instead of creating an internal transaction.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var transaction = context.Connection.BeginTransaction();
 try
 {
@@ -19,7 +19,7 @@ catch
 {
 	transaction.Rollback();
 }
-{% endhighlight %}
+```
 ---
 
 ## Bulk Operations
@@ -27,8 +27,8 @@ Bulk Operations such as BulkInsert, BulkUpdate, BulkDelete doesn't use a transac
 
 If you start a transaction within LinqToSql, Bulk Operations will honor it.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 var transaction = context.Connection.BeginTransaction();
 try
 {
@@ -40,4 +40,4 @@ catch
 {
 	transaction.Rollback();
 }
-{% endhighlight %}
+```
