@@ -1,6 +1,4 @@
----
-permalink: requirements
----
+# Requirements
 
 ## LinqToSql
 - System.Data.Linq

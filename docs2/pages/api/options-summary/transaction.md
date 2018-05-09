@@ -1,6 +1,4 @@
----
-permalink: transaction
----
+# Transaction
 
 ## BulkSubmitChanges
 As SubmitChanges, BulkSubmitChanges already save all entities within an internal transaction. So by default, there is nothing to do.

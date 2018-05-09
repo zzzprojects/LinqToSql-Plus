@@ -1,6 +1,4 @@
----
-permalink: trial
----
+# Trial Expired
 
 Oops! Your trial has expired.
 

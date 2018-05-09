@@ -1,7 +1,4 @@
----
-permalink: column-input-expression
----
-
+# ColumnInputExpression
 ## Definition
 Gets or sets columns to map with the direction `Input`.
 

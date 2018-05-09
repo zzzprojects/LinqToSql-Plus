@@ -1,6 +1,4 @@
----
-permalink: installing
----
+# Installing
 
 **LinqToSql Plus** can be installed through NuGet.
 

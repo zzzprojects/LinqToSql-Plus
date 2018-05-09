@@ -1,6 +1,4 @@
----
-permalink: benchmark
----
+# Benchmark
 
 ## Problem
 You perform benchmark tests for a method like BulkInsert, but you get very bad performance results.

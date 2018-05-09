@@ -1,6 +1,4 @@
----
-permalink: tutorial-bulk-operations
----
+# Batch Operations
 
 ## Definition
 Bulk operations method gives you additional flexibility by allowing to customize options such as primary key, columns, include childs entities and more.
