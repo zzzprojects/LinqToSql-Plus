@@ -23,7 +23,8 @@ context.BulkMerge(list);
 context.BulkMerge(customers, options => 
 	options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
-
+## Installing
+Download the <a href="/download">NuGet Package</a>
 
 ## Bulk Operations Methods
 
