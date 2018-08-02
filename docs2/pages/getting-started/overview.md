@@ -23,6 +23,17 @@ context.BulkMerge(list);
 context.BulkMerge(customers, options => 
 	options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
+
+## Requirements
+
+### LinqToSql
+- System.Data.Linq
+
+### Database Provider
+
+- SQL Server 2008+
+- SQL Azure
+
 ## Installing
 Download the <a href="/download">NuGet Package</a>
 
