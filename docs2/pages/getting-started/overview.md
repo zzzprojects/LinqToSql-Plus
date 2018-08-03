@@ -24,6 +24,18 @@ context.BulkMerge(customers, options =>
 	options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
 
+## Installing
+Download the <a href="/download">NuGet Package</a>
+
+## Requirements
+
+### LinqToSql
+- System.Data.Linq
+
+### Database Provider
+
+- SQL Server 2008+
+- SQL Azure
 
 ## Bulk Operations Methods
 
