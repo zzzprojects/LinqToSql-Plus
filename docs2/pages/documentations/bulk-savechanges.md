@@ -77,8 +77,3 @@ Read more: [AllowConcurrency](/allow-concurrency)
 context.BulkSaveChanges(options => options.AllowConcurrency = false);
 ```
 {% include section-faq-end.html %}
-
-## Related Articles
-
-- [How to Benchmark?](benchmark)
-- [How to Improve Bulk SaveChanges Performances?](improve-bulk-savechanges)
