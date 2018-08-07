@@ -4,7 +4,7 @@
 
 You execute a method from the LinqToSql Plus library, and the following error is thrown:
 
-{% include template-exception.html message='Type not supported yet (LazyType): [TypeName]' %}
+> Type not supported yet (LazyType): [TypeName]'
 
 ## Solution
 
