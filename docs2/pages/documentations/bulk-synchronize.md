@@ -76,8 +76,3 @@ context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression
 context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
 ```
 {% include section-faq-end.html %}
-
-## Related Articles
-- [How to Benchmark?](benchmark)
-- [How to use Custom Column?](custom-column)
-- [How to use Custom Key?](custom-key)
