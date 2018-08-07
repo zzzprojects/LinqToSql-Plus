@@ -4,7 +4,7 @@
 
 You execute a method from the LinqToSql Plus library, and the following error is thrown:
 
-{% include template-exception.html message='ERROR_005: The monthly trial period is expired. You can extend your trial by downloading the latest version. You can also purchase a perpetual license on our website. If you already own this license, this error only appears if the license has not been found, you can find additional information on our troubleshooting section (http://linqtosql-plus.net/trial). Contact our support team for more details: info@zzzprojects.com' %}
+> ERROR_005: The monthly trial period is expired. You can extend your trial by downloading the latest version. You can also purchase a perpetual license on our website. If you already own this license, this error only appears if the license has not been found, you can find additional information on our troubleshooting section (http://linqtosql-plus.net/trial). Contact our support team for more details: info@zzzprojects.com'
 
 ## Solution
 
@@ -18,7 +18,7 @@ You execute a method from the LinqToSql Plus library, and the following error is
 
 #### Trial Period Expired
 
-You can extend your trial by downloading the latest version: [Upgrading](http://linqtosql-plus.net/upgrading)
+You can extend your trial by downloading the latest version.
 
 The latest version always contains a trial for the current month to allow companies to evaluate our library for several months.
 
