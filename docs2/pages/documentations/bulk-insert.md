@@ -84,8 +84,3 @@ The major difference between both methods is `SubmitChanges` uses the `ChangeTra
 
 By skipping the `ChangeTracker`, some methods like `Add`, `AddRange`, `DetectChanges` are no longer required which greatly helps to improve the performance.
 {% include section-faq-end.html %}
-
-## Related Articles
-
-- [How to Benchmark?](benchmark)
-- [How to use Custom Column?](custom-column)
