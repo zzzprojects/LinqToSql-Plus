@@ -41,9 +41,3 @@ By example:
 | BulkUpdate      | 50 ms          | 55 ms          | 65 ms          |
 | BulkDelete      | 45 ms          | 50 ms          | 60 ms          |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
-
-### Related Articles
-
-- [How to Benchmark?](benchmark)
-- [How to use Custom Column?](custom-column)
-- [How to use Custom Key?](custom-key)
