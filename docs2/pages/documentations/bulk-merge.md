@@ -109,8 +109,3 @@ To provide the best performance possible!
 
 Since using the `ChangeTracker` can greatly reduce performance, we chose to let `SubmitChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
 {% include section-faq-end.html %}
-
-## Related Articles
-- [How to Benchmark?](benchmark)
-- [How to use Custom Column?](custom-column)
-- [How to use Custom Key?](custom-key)
