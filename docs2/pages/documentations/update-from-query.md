@@ -9,11 +9,11 @@ An `UPDATE` statement is built using the LINQ expression and directly executed i
 ```csharp
 // UPDATE all customers that are inactive for more than two years
 context.Customers
-    .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
-    .UpdateFromQuery(x => new Customer {Actif = false});
+    .Where(x => x.IsActive && x.LastLogin < DateTime.Now.AddYears(-2))
+    .UpdateFromQuery(x => new Customer {IsActive = false});
 	
 // UPDATE customers by id
-context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
+context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {IsActive = false});
 ```
 
 ## Purpose
